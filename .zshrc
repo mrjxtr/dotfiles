@@ -22,7 +22,7 @@ compinit
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' 'm:{A-Z}={a-z}'
 
 # Aliases
-alias pwsh="pwsh.exe"
+alias pwsh="pwsh.exe -c ''"
 alias opera="pwsh.exe -c 'start opera.exe'"
 alias explorer="explorer.exe"
 alias cls="clear"
