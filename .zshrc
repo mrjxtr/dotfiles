@@ -3,6 +3,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+
 # History settings
 HISTFILE=~/.histfile
 HISTSIZE=10000
@@ -26,6 +27,8 @@ alias pwsh="pwsh.exe -c ''"
 alias opera="pwsh.exe -c 'start opera.exe'"
 alias explorer="explorer.exe"
 alias cls="clear"
+alias desktop="cd 'd/Admin Files/Desktop'"
+alias home="cd ~"
 
 # Plugins and themes
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -33,6 +36,14 @@ source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 source ~/alias-tips/alias-tips.plugin.zsh
+
+export PATH=/usr/local/cuda/bin:$PATH
+export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
+
+# Start TMUX automatically
+if [[ -z "$TMUX" ]]; then
+  tmux attach || tmux new-session
+fi
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -48,3 +59,4 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
