@@ -30,6 +30,7 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' 'm:{A-Z}={a-z}'
 
 # Aliases
 alias nv="nvim"
+alias cfgchad="cd ~/.config/nvim/ && nvim ."
 alias cfgnvim="nv ~/.config/nvim/init.vim"
 alias cfhvim="nv ~/.vimrc"
 alias cfgp10k="nv ~/.p10k.zsh"
