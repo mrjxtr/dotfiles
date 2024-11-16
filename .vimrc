@@ -1,3 +1,6 @@
+syntax enable
+
+
 set number            " Show absolute line number for the current line
 set relativenumber    " Show relative line numbers for other lines
 
